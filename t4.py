@@ -58,7 +58,7 @@ def get_K_and_D(checkerboard, imgsPath):
 # checkerboard： 棋盘格的格点数目
 # imgsPath: 存放鱼眼图片的路径
 '''
-DIM,K,D =  get_K_and_D((6,9), '/home/ehhewng/Pictures/')
+DIM,K,D =  get_K_and_D((6,9), './')
 
 def undistort(img_path):
     img = cv2.imread(img_path)
@@ -67,5 +67,5 @@ def undistort(img_path):
     undistorted_img = cv2.remap(img, map1, map2, interpolation=cv2.INTER_LINEAR,borderMode=cv2.BORDER_CONSTANT)    
     cv2.imwrite('unfisheyeImage.png', undistorted_img)
 
-undistort("/home/ehhewng/Pictures/fish_eye3.jpg")
+undistort("fish_eye.png")
 
